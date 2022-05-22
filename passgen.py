@@ -5,20 +5,19 @@ l1 = list(string.ascii_lowercase)
 l2 = list(string.ascii_uppercase)
 l3 = list(string.punctuation)
 l4 = list(string.digits)
-#taking user password length
-inpt = input("Please enter password length : ")
-#validating user input
+
 while True:
+    #taking user password length
+    inpt = input("Please enter password length : ")
+    #validating user input
     try:
         inpt  = int(inpt)
         if inpt < 6 :
             print("Password length must be 6 or more...")
-            inpt = input("Please enter password length : ")
         else:
             break
     except:
         print("Please enter only numbers.")
-        inpt = input("Please enter password length : ")
 #shuffeling lists
 ran.shuffle(l1)
 ran.shuffle(l2)
